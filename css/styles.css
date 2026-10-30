@@ -271,7 +271,7 @@ img {
 /* Page Banner & Hero */
 .page-banner {
   background: linear-gradient(rgba(34, 139, 34, 0.12), rgba(92, 64, 51, 0.15)),
-              url('C:\\Users\\Laptop\\Desktop\\straight-to-the-point-archery\\images\\header.jpg') center/cover no-repeat;
+              url('images\\header.jpg') center/cover no-repeat;
   background-color: var(--deep-brown);
   padding: 2.5rem 0;
   border-bottom: 3px solid var(--forest-green);
@@ -844,7 +844,7 @@ textarea.form-control {
 }
 .site-footer {
   background: linear-gradient(rgba(92, 64, 51, 0.88), rgba(92, 64, 51, 0.95)),
-              url('C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\footerImage.jpg') center/cover no-repeat;
+              url('images\footerImage.jpg') center/cover no-repeat;
   background-color: var(--deep-brown);
   color: var(--cream-white);
   margin-top: auto;
