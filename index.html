@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Straight to the Point Archery</title>
+  <!-- Google Fonts: Montserrat Bold & Open Sans Regular -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href=C:\Users\Laptop\Desktop\straight-to-the-point-archery\css\styles.css>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation (Consistent across all 6 pages) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Straight to the Point Archery Home">
+        <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></span>
+        <span class="logo-text">
+          Straight to the Point
+          <span>Archery Center</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li class="has-dropdown">
+            <a href="classes.html">Classes <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;" aria-hidden="true"></i></a>
+            <ul class="dropdown-menu" aria-label="Classes Submenu">
+              <li><a href="classes.html#a101">A101 Basic Archery</a></li>
+              <li><a href="classes.html#a102">A102 Intermediate</a></li>
+              <li><a href="classes.html#a103">A103 Advanced</a></li>
+            </ul>
+          </li>
+          <li><a href="instructors.html">Instructors</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-card">
+          <h1 id="hero-heading">Straight to the Point</h1>
+          <p>Discover safe, inclusive, and expert archery instruction in Tacoma. Whether you are picking up a bow for the very first time, enrolling your child, or training for national tournaments, all equipment is provided and USA Archery-certified coaches guide every shot.</p>
+          <div class="hero-actions">
+            <a href="classes.html" class="btn btn-gold"><i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Book a Lesson</a>
+            <a href="classes.html" class="btn btn-outline"><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Join Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Classes Section -->
+    <section class="section" aria-labelledby="home-classes-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="home-classes-heading" class="section-title">Our Classes</h2>
+          <p class="section-subtitle">Structured step-by-step group courses from beginner fundamentals to competitive tournament mastery. All bows, arrows, and safety gear are included.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <img src='C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\Basic.jpg' alt="Beginner archer learning proper stance on the indoor target range" class="card-img">
+            <div class="card-body">
+              <h3 class="card-title">A101 Basic</h3>
+              <p class="card-text">Designed for students with no prior experience. Learn range safety, stance, bow handling, and shooting technique at 10 yards. All equipment provided.</p>
+              <a href="classes.html#a101" class="btn btn-gold">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\intermediate.jpg" alt="Intermediate archer aiming a recurve bow at a 20-yard target" class="card-img">
+            <div class="card-body">
+              <h3 class="card-title">A102 Intermediate</h3>
+              <p class="card-text">Builds on A101 fundamentals with form refinement, sight adjustments, recurve &amp; compound styles, and tournament scoring protocols.</p>
+              <a href="classes.html#a102" class="btn btn-gold">Learn More</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\advanvanced.jpg" alt="Competitive archer shooting precision arrows on a regulation range" class="card-img">
+            <div class="card-body">
+              <h3 class="card-title">A103 Advanced</h3>
+              <p class="card-text">High-performance coaching focused on competitive biomechanics, custom equipment tuning, mental preparation, and USA Archery tournament readiness.</p>
+              <a href="classes.html#a103" class="btn btn-gold">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Straight to the Point (Trust Section) -->
+    <section class="section" style="padding-top:0;" aria-labelledby="trust-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="trust-heading" class="section-title">Why Straight to the Point</h2>
+          <p class="section-subtitle">Parents, beginners, and serious athletes trust our center for uncompromised safety and professional coaching.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card text-center">
+            <div class="card-body">
+              <div class="circle-icon" aria-hidden="true"><i class="fa-solid fa-medal"></i></div>
+              <h3 class="card-title">Certified Instructors</h3>
+              <p class="card-text">Every coach holds USA Archery National Training System (NTS) certification along with current SafeSport, First Aid, and CPR credentials.</p>
+            </div>
+          </article>
+
+          <article class="card text-center">
+            <div class="card-body">
+              <div class="circle-icon" aria-hidden="true"><i class="fa-solid fa-warehouse"></i></div>
+              <h3 class="card-title">Great Facilities</h3>
+              <p class="card-text">28 indoor shooting lanes (14 at 10 yards and 14 at 20 yards), private coaching bays, and full beginner-to-advanced rental equipment included.</p>
+            </div>
+          </article>
+
+          <article class="card text-center">
+            <div class="card-body">
+              <div class="circle-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+              <h3 class="card-title">Safety First</h3>
+              <p class="card-text">Strict whistle range commands, mandatory first-day safety orientations, fitted armguards, and supervised shooting lines keep every archer safe.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Instructors Section -->
+    <section class="section" style="padding-top:0;" aria-labelledby="home-instructors-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="home-instructors-heading" class="section-title">Meet Our Instructors</h2>
+          <p class="section-subtitle">Get to know our friendly, certified coaching team before your first lesson.</p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card text-center">
+            <div class="card-body">
+              <img src="C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\instructor-bio-image3.png" alt="Portrait of instructor Derek Jenkins" class="circle-photo">
+              <h3 class="card-title">Derek Jenkins</h3>
+              <p class="card-text">USA Archery Level 3 NTS Coach specializing in recurve and compound bow tuning with over 20 years of Washington archery experience.</p>
+              <a href="instructors.html#derek" class="btn btn-outline">View Profile</a>
+            </div>
+          </article>
+
+          <article class="card text-center">
+            <div class="card-body">
+              <img src="C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\instructor-bio-image2.png" alt="Portrait of instructor Amy Smith" class="circle-photo">
+              <h3 class="card-title">Amy Smith</h3>
+              <p class="card-text">USA Archery Level 2 Coach &amp; Youth Specialist focused on range safety, beginner confidence, and foundational form in A101 &amp; A102.</p>
+              <a href="instructors.html#amy" class="btn btn-outline">View Profile</a>
+            </div>
+          </article>
+
+          <article class="card text-center">
+            <div class="card-body">
+              <img src="C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\instructor-bio-image1.png" alt="Portrait of instructor Nathan Lee" class="circle-photo">
+              <h3 class="card-title">Nathan Lee</h3>
+              <p class="card-text">USA Archery Level 3 NTS Coach and former collegiate competitor leading A103 Advanced tournament preparation and 1-on-1 coaching.</p>
+              <a href="instructors.html#nathan" class="btn btn-outline">View Profile</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-band">
+          <div>
+            <h2>Ready to Step Up to the Shooting Line?</h2>
+            <p>Book a private lesson, enroll in a weekly class, or ask about group and team-building events.</p>
+          </div>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a href="private-lessons.html" class="btn btn-gold">Book a Lesson</a>
+            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer (Deep Brown #5C4033) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <span class="logo-mark" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></span>
+            <span>Straight to the Point Archery</span>
+          </a>
+          <p>Tacoma's premier non-profit indoor archery training facility for beginners, youth, families, and competitive athletes.</p>
+          <ul class="social-links" aria-label="Social Media Links">
+            <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Watch our videos on YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Quick Links</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="private-lessons.html">Private Lessons</a></li>
+            <li><a href="instructors.html">Instructors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html#nondiscriminatory-policy">Nondiscriminatory Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h2 class="footer-heading">Contact</h2>
+          <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> 528 Nock Point Ln, Tacoma, WA 98412</p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+12535551010">(253) 555-1010</a></p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:archery-education@example.com">archery-education@example.com</a></p>
+          <p style="margin-top:0.65rem;"><a href="about.html#nondiscriminatory-policy"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i> Nondiscriminatory Policy</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Straight to the Point Archery. All rights reserved.</span>
+        <span>Designed to WCAG AA Accessibility Standards</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        menuToggle.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+          : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+      });
+    }
+
+  </script>
+</body>
+</html>

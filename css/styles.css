@@ -1,0 +1,853 @@
+/* Straight to the Point Archery - Brand Style Guide */
+:root {
+  --forest-green: #228B22;
+  --forest-green-dark: #196b19;
+  --deep-brown: #5C4033;
+  --deep-brown-dark: #432e24;
+  --gold-accent: #DAA520;
+  --gold-hover: #c49218;
+  --cream-white: #f5f5dc;
+  --surface-white: #FFFFFF;
+  --text-dark: #1F1A17;
+  --text-muted: #4E453E;
+  --border-color: #D6D2B8;
+  --max-width: 1200px;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(31, 26, 23, 0.08);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--cream-white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--forest-green);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold-accent);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--gold-accent);
+  color: var(--text-dark);
+  font-weight: 700;
+  padding: 0.75rem 1.25rem;
+  z-index: 9999;
+  border-radius: var(--radius);
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header & Navigation (Wireframe Page 8) */
+.site-header {
+  background-color: var(--surface-white);
+  border-bottom: 3px solid var(--forest-green);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 76px;
+  gap: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--forest-green);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--forest-green);
+  color: var(--surface-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  border: 2px solid var(--gold-accent);
+  flex-shrink: 0;
+}
+
+.logo-text span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--deep-brown);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  display: none;
+  min-width: 44px;
+  min-height: 44px;
+  background: transparent;
+  border: 2px solid var(--forest-green);
+  border-radius: var(--radius);
+  color: var(--forest-green);
+  font-size: 1.25rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a {
+  color: var(--text-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 3px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  border-bottom-color: var(--gold-accent);
+  color: var(--forest-green);
+}
+
+.main-nav a.active {
+  color: var(--forest-green);
+  font-weight: 700;
+  border-bottom-color: var(--forest-green);
+}
+
+/* Laptop Classes Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--forest-green);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.5rem 0;
+  z-index: 1100;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background-color: var(--cream-white);
+  color: var(--forest-green);
+}
+
+/* This makes it hide normally and only show when hovering over 'Classes' */
+.has-dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Buttons (Gold Accent #DAA520) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  min-height: 44px;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn-gold {
+  background-color: var(--gold-accent);
+  color: var(--text-dark);
+  border-color: #b58512;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background-color: var(--gold-hover);
+  color: var(--text-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: var(--surface-white);
+  color: var(--forest-green);
+  border-color: var(--forest-green);
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background-color: var(--forest-green);
+  color: var(--surface-white);
+}
+
+/* Page Banner & Hero */
+.page-banner {
+  background: linear-gradient(rgba(34, 139, 34, 0.12), rgba(92, 64, 51, 0.15)),
+              url('C:\\Users\\Laptop\\Desktop\\straight-to-the-point-archery\\images\\header.jpg') center/cover no-repeat;
+  background-color: var(--deep-brown);
+  padding: 2.5rem 0;
+  border-bottom: 3px solid var(--forest-green);
+}
+
+.page-banner-box {
+  background-color: rgba(245, 245, 220, 0.95);
+  border: 2px solid var(--forest-green);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+}
+
+.page-banner-box h1 {
+  color: var(--forest-green);
+  font-size: 2rem;
+  margin-bottom: 0.35rem;
+}
+
+.page-banner-box p {
+  color: var(--text-dark);
+  max-width: 760px;
+}
+
+.hero {
+  background: linear-gradient(90deg, rgba(31, 26, 23, 0.72) 0%, rgba(31, 26, 23, 0.45) 100%),
+              url('https://img.magnific.com/premium-photo/detailed-view-arrow-lodged-target-with-feathers-fletching-visible_153912-386132.jpg') center/cover no-repeat;
+  padding: 3.5rem 0;
+  border-bottom: 4px solid var(--forest-green);
+}
+
+.hero-card {
+  background-color: rgba(245, 245, 220, 0.95);
+  border: 2px solid var(--forest-green);
+  border-radius: var(--radius);
+  padding: 2.25rem;
+  max-width: 760px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card h1 {
+  color: var(--forest-green);
+  font-size: 2.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-card p {
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Sections & Grids */
+.section {
+  padding: 3.25rem 0;
+}
+
+.section-header {
+  margin-bottom: 1.75rem;
+}
+
+.section-title {
+  color: var(--forest-green);
+  font-size: 1.65rem;
+  display: inline-block;
+  padding-bottom: 0.4rem;
+  border-bottom: 4px solid var(--gold-accent);
+}
+
+.section-subtitle {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  max-width: 720px;
+}
+
+/* Laptop: 3 columns, Tablet: 2 columns, Phone: 1 column */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Cards */
+.card {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--border-color);
+  background-color: #e6e4d5;
+}
+
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  color: var(--forest-green);
+  font-size: 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.card-text {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.meta-list {
+  list-style: none;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  background-color: var(--cream-white);
+  border-left: 4px solid var(--forest-green);
+  border-radius: 4px;
+  font-size: 0.92rem;
+}
+
+.meta-list li + li {
+  margin-top: 0.35rem;
+}
+
+/* Circular Photo Crops (Instructors & Trust Pillars) */
+.circle-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--forest-green);
+  background-color: var(--cream-white);
+}
+
+.circle-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: var(--cream-white);
+  border: 2px solid var(--forest-green);
+  color: var(--forest-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Classes Stacked Comparison Row on Laptop (Wireframe Page 3) */
+.class-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.class-row {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+.class-row-img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.class-row-body {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Intro Split Block (Private Lessons & About Us Mission) */
+.split-block {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 1.75rem;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.split-block img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+/* Forest Green CTA Band (Wireframe Page 3 & Page 5) */
+.cta-band {
+  background-color: var(--forest-green);
+  color: var(--surface-white);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cta-band h2, .cta-band h3 {
+  color: var(--surface-white);
+  margin-bottom: 0.25rem;
+}
+
+/* Nondiscriminatory Policy Box (Wireframe Page 6) */
+.policy-box {
+  background-color: var(--surface-white);
+  border: 2px solid var(--forest-green);
+  border-left: 8px solid var(--forest-green);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+/* Contact Page Layout (Wireframe Page 7) */
+.contact-details-card {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.75rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  row-gap: 0.85rem;
+  column-gap: 1rem;
+  align-items: baseline;
+}
+
+.contact-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--forest-green);
+}
+
+.contact-value a {
+  font-weight: 700;
+  text-decoration: underline;
+  display: inline-block;
+  padding: 0.2rem 0;
+}
+
+.map-box {
+  background-color: #d8e2d5;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2.25rem;
+  box-shadow: var(--shadow);
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
+
+.contact-form {
+  background-color: var(--surface-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 0.4rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #B5B099;
+  border-radius: var(--radius);
+  background-color: #FFFDF7;
+}
+
+textarea.form-control {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-status {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius);
+  background-color: #e7f6e7;
+  border: 2px solid var(--forest-green);
+  color: var(--forest-green-dark);
+  font-weight: 600;
+}
+
+/* Site Footer (Deep Brown #5C4033 - Wireframes Pages 3-7) */
+.site-footer {
+  background-color: var(--deep-brown);
+  color: var(--cream-white);
+  margin-top: auto;
+  padding: 2.75rem 0 2rem;
+  border-top: 4px solid var(--gold-accent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--surface-white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-logo .logo-mark {
+  background-color: var(--surface-white);
+  color: var(--deep-brown);
+  border-color: var(--gold-accent);
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+  list-style: none;
+}
+
+.social-links a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--surface-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border: 1px solid rgba(218, 165, 32, 0.5);
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  background-color: var(--gold-accent);
+  color: var(--text-dark);
+}
+
+.footer-heading {
+  color: var(--gold-accent);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.footer-links li {
+  width: calc(50% - 0.75rem);
+}
+
+.footer-links a,
+.footer-contact a {
+  color: var(--cream-white);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--gold-accent);
+  text-decoration: underline;
+}
+
+.footer-contact p {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(245, 245, 220, 0.2);
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Tablet Breakpoint (<= 992px / 768px Wireframe) */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background-color: var(--surface-white);
+    border-bottom: 3px solid var(--forest-green);
+    box-shadow: var(--shadow);
+    padding: 1rem 1.25rem;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav li {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .main-nav a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.85rem 0.25rem;
+    border-bottom: none;
+  }
+
+  .dropdown-menu {
+    display: block;
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0.5rem 1.25rem;
+    background-color: transparent;
+  }
+
+  .dropdown-menu li {
+    border-bottom: none;
+  }
+
+  .dropdown-menu a {
+    padding: 0.45rem 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* About Us Facility Gallery stays 3 columns on Tablet per Wireframe Page 6 */
+  .facilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .class-row {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .split-block {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Phone Breakpoint (<= 600px / 375px Wireframe) */
+@media (max-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Facility Gallery is 2 columns on Phone per Wireframe Page 6 */
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .class-row,
+  .split-block {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card {
+    padding: 1.5rem;
+  }
+
+  .hero-card h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-actions .btn,
+  .card .btn,
+  .class-row .btn,
+  .contact-form .btn {
+    width: 100%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    row-gap: 0.25rem;
+  }
+
+  .contact-value {
+    margin-bottom: 0.65rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.site-footer {
+  background: linear-gradient(rgba(92, 64, 51, 0.88), rgba(92, 64, 51, 0.95)),
+              url('C:\Users\Laptop\Desktop\straight-to-the-point-archery\images\footerImage.jpg') center/cover no-repeat;
+  background-color: var(--deep-brown);
+  color: var(--cream-white);
+  margin-top: auto;
+  padding: 2.75rem 0 2rem;
+  border-top: 4px solid var(--gold-accent);
+}
